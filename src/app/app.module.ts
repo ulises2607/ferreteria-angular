@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ProductosComponent } from './productos/productos.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

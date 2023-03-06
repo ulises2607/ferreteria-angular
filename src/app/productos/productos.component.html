@@ -1,1 +1,34 @@
-<p>productos works!</p>
+<div class="card border-secondary mb-3">
+  <div class="card-header">Productos</div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">Lista de Productos</h5>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr *ngFor="let columna of ColumnTableProdcutos">
+          <th>
+            {{columna}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of listaProducto">
+          <td>{{producto.id_producto}}</td>
+          <td>{{producto.imagen_producto}}</td>
+          <td>{{producto.id_categoria}}</td>
+          <td>{{producto.id_sector}}</td>
+          <td>{{producto.codigo_producto}}</td>
+          <td>{{producto.nombre_producto}}</td>
+          <td>{{producto.stock_producto}}</td>
+          <td>{{producto.precio_producto}}</td>
+          <td>{{producto.fecha_alta_producto}}</td>
+          <td>{{producto.fecha_modificacion_producto}}</td>
+          <td>{{producto.desc_producto}}</td>
+          <td>{{producto.descuento_producto}}</td>
+          <td>{{producto.estado_producto == 1? 'ACTIVO' : 'DE BAJA'}}</td>
+          <td>{{producto.stock_minimo_producto}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
