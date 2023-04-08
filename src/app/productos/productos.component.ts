@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild , AfterViewInit} from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
 import { Producto } from './producto';
 
 @Component({
@@ -7,8 +10,10 @@ import { Producto } from './producto';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent implements OnInit {
+
+  
   ColumnTableProdcutos = ['Id','Imagen','Categoria','Sector','Codigo','Nombre','Stock' ,'Precio','Fecha alta' , 'Fecha modificacion',
-    'Descripcion','Descuento','Estado','Stock minimo']
+    'Descripcion','Estado','Stock minimo'];
   listaProducto : Producto[] = [{
     "id_producto": 1,
     "id_categoria": 1,
@@ -107,9 +112,27 @@ export class ProductosComponent implements OnInit {
   },
 
 ];
-  constructor() { }
+
+@ViewChild(MatPaginator) paginator!: MatPaginator;
+@ViewChild(MatSort) sort!: MatSort;
+public dataSource = new MatTableDataSource<any>();
+
+// public dataSource= new MatTableDataSource(this.listaProducto);
+constructor() { }
 
   ngOnInit(): void {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+    this.dataSource = new MatTableDataSource(this.listaProducto);
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
 }
