@@ -122,6 +122,7 @@ public dataSource = new MatTableDataSource<any>();
 constructor(private serviceProducto : ProductoService ) { }
 
   ngOnInit(): void {
+    this.getCLientes();
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
     // this.dataSource = new MatTableDataSource(this.listaProducto);
@@ -143,6 +144,9 @@ constructor(private serviceProducto : ProductoService ) { }
         this.listaProducto = data;
         this.dataSource = new MatTableDataSource(this.listaProducto);
       }
+    }
+    ,error => {
+      console.error(error);
     })
 
   }
