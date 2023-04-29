@@ -1,0 +1,62 @@
+<div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Producto</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form action="">
+        <!--
+
+
+
+
+
+	private String descripcion_producto;
+	private Double decuento_producto;
+	private Short estado_producto;
+	private Long stock_minimo;
+	private byte[] imagen; -->
+        <div class="row">
+          <div class="col-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input matInput placeholder="Nombre" type="text" name="nombre">
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Codigo</mat-label>
+              <input matInput placeholder="Codigo" type="text" nombre="codigo">
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Stock</mat-label>
+              <input matInput placeholder="Stock" type="number" name="stock">
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline">
+              <mat-select id="id-categoria" placeholder="Categoria">
+                <mat-option *ngFor="let option of listCategoria" [value]="option"></mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline">
+              <mat-select id="id-sector" placeholder="Sector">
+                <mat-option *ngFor="let option of listSector" [value]="option"></mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Precio</mat-label>
+              <input matInput placeholder="Precio" type="number" name="precio">
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
