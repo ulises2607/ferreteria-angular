@@ -4,6 +4,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import { Producto } from './producto';
 import { ProductoService } from './producto.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-productos',
@@ -119,7 +120,8 @@ export class ProductosComponent implements OnInit {
 public dataSource = new MatTableDataSource<any>();
 
 // public dataSource= new MatTableDataSource(this.listaProducto);
-constructor(private serviceProducto : ProductoService ) { }
+constructor(private serviceProducto : ProductoService,
+            private router: Router ) { }
 
   ngOnInit(): void {
     this.getCLientes();
@@ -152,7 +154,7 @@ constructor(private serviceProducto : ProductoService ) { }
   }
 
   crearProducto(){
-
+    this.router.navigateByUrl('crearProducto');
   }
 
 }

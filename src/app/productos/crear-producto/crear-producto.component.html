@@ -5,17 +5,6 @@
     </mat-card-header>
     <mat-card-content>
       <form action="">
-        <!--
-
-
-
-
-
-	private String descripcion_producto;
-	private Double decuento_producto;
-	private Short estado_producto;
-	private Long stock_minimo;
-	private byte[] imagen; -->
         <div class="row">
           <div class="col-4">
             <mat-form-field appearance="outline">
@@ -53,6 +42,12 @@
             <mat-form-field appearance="outline">
               <mat-label>Precio</mat-label>
               <input matInput placeholder="Precio" type="number" name="precio">
+            </mat-form-field>
+          </div>
+          <div class="col-4">
+            <mat-form-field appearance="outline">
+              <mat-label>Descripcion</mat-label>
+              <textarea matInput placeholder="Ingrese descripcion"></textarea>
             </mat-form-field>
           </div>
         </div>

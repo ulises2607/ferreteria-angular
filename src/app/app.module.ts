@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
@@ -19,6 +19,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     MatCheckboxModule,
     MatIconModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
