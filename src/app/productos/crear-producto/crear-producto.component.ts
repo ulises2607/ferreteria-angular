@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-producto',
@@ -12,7 +13,9 @@ export class CrearProductoComponent implements OnInit{
     public listCategoria = [];
     public listSector = [];
 
-    constructor(){
+    constructor(
+      private router: Router
+    ){
 
     }
 
@@ -33,4 +36,9 @@ export class CrearProductoComponent implements OnInit{
         }
       }
     }
+
+    volver(){
+      this.router.navigateByUrl('');
+    }
+
 }

@@ -19,6 +19,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatSelectModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
