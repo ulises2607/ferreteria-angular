@@ -19,6 +19,23 @@
             </mat-form-field>
           </div>
           <div class="col-4">
+            <!-- <mat-form-field>
+              <mat-label>Imagen</mat-label>
+              <input type="file" (change)="selectFile($event)">
+            </mat-form-field> -->
+            <!-- <div class="form-group">
+              <label class="form-label"><strong>Imagen Producto:</strong></label>
+              <input type="file"
+              class="form-control"
+              [class.is-invalid] = "imageNoValido"
+              formControlName="product_image"
+              (change)="selectFile($event)">
+            <small *ngIf="imageNoValido" class="text-danger">
+              El campo imagen es obligatorio.
+            </small>
+            </div> -->
+          </div>
+          <div class="col-4">
             <mat-form-field appearance="outline">
               <mat-label>Stock</mat-label>
               <input matInput placeholder="Stock" type="number" name="stock">
