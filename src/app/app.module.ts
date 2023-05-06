@@ -19,13 +19,15 @@ import { ProductosComponent } from './productos/productos.component';
 import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
+import { AdjuntoComponent } from './productos/adjunto/adjunto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductosComponent,
     NavbarComponent,
-    CrearProductoComponent
+    CrearProductoComponent,
+    AdjuntoComponent
   ],
   imports: [
     BrowserModule,
