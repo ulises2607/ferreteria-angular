@@ -6,6 +6,7 @@ import { Producto } from './producto';
 import { ProductoService } from './producto.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
