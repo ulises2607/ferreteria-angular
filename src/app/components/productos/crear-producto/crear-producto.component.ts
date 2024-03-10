@@ -12,6 +12,8 @@ export class CrearProductoComponent implements OnInit{
     public imagen!: File;
     public listCategoria = [];
     public listSector = [];
+    public maxSizeDocumento = 10485760;
+    public adjuntos: any[] = [];
 
     constructor(
       private router: Router
@@ -34,6 +36,12 @@ export class CrearProductoComponent implements OnInit{
         reader.onload = (event:any) => {
           this.url_image = event.target.result;
         }
+      }
+    }
+
+    loadFileAdjuntos(retorno:any){
+      if(retorno != null){
+        this.adjuntos = retorno;
       }
     }
 

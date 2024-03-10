@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import {FormBuilder} from '@angular/forms';
 
 @Component({
@@ -6,6 +6,8 @@ import {FormBuilder} from '@angular/forms';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
+
 export class NavbarComponent {
   public options = this._formBuilder.group({
     bottom: 0,

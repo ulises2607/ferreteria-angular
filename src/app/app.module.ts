@@ -13,14 +13,16 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
-import { ProductosComponent } from './productos/productos.component';
-import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AdjuntoComponent } from './productos/adjunto/adjunto.component';
+import { ProductosComponent } from './components/productos/productos.component';
+import { CrearProductoComponent } from './components/productos/crear-producto/crear-producto.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AdjuntoComponent } from './components/productos/adjunto/adjunto.component';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     ProductosComponent,
     NavbarComponent,
     CrearProductoComponent,
-    AdjuntoComponent
+    AdjuntoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDialogModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
     MatToolbarModule,

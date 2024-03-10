@@ -1,14 +1,16 @@
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { AppComponent } from './app.component';
-import { CrearProductoComponent } from './productos/crear-producto/crear-producto.component';
+import { CrearProductoComponent } from './components/productos/crear-producto/crear-producto.component';
 import { NgModule } from '@angular/core';
-import { ProductosComponent } from './productos/productos.component';
+import { ProductosComponent } from './components/productos/productos.component';
+import { LoginComponent } from './components/login/login.component';
 
 const appRoutes: Routes = [
   //{ path: '', component: NavbarComponent},
-  { path: '', component: ProductosComponent},
-  { path: 'crearProducto', component: CrearProductoComponent },
+  { path: '', component: LoginComponent},
+  { path: 'inicio' , component: LoginComponent},
+  // { path: 'crearProducto', component: CrearProductoComponent },
   { path: '**', pathMatch:'full', redirectTo: ''}
 ];
 
