@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {FormBuilder} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -28,12 +29,31 @@ export class NavbarComponent {
       item:'Pedido de Compra',
       icon:'loyalty'
     },
-    { item:'Proveedor',
+    { 
+      item:'Proveedor',
       icon:'person'
+    },
+    { 
+      item:'Sector',
+      icon: 'bookmarks'
     }
   ]
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(
+    private _formBuilder: FormBuilder, 
+    private router: Router
+    ) {}
 
+  clickMenu(item:any) {
+    if( item == "Productos") {
+      let path = "productos"
+      this.router.navigate([path]);
+    } else if( item == "Sector") {
+      let path = "sector"
+      this.router.navigate([path]);
+    }
+  }
 
 }
+
+

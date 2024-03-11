@@ -5,12 +5,15 @@ import { CrearProductoComponent } from './components/productos/crear-producto/cr
 import { NgModule } from '@angular/core';
 import { ProductosComponent } from './components/productos/productos.component';
 import { LoginComponent } from './components/login/login.component';
+import { SectorComponent } from './components/sector/sector.component';
 
 const appRoutes: Routes = [
-  //{ path: '', component: NavbarComponent},
-  { path: '', component: LoginComponent},
-  { path: 'inicio' , component: LoginComponent},
-  // { path: 'crearProducto', component: CrearProductoComponent },
+  { path: '', component: NavbarComponent},
+  // { path: '', component: LoginComponent},
+  // { path: 'inicio' , component: LoginComponent},
+  { path: 'productos', component: ProductosComponent },
+  { path: 'crearProducto', component: CrearProductoComponent },
+  { path: 'sector', component: SectorComponent },
   { path: '**', pathMatch:'full', redirectTo: ''}
 ];
 

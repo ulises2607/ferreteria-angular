@@ -7,7 +7,7 @@
                   <h4 class="titulo-menu">Menu</h4>
                       <mat-list-item *ngFor="let menu of itemsMenu">
                         <mat-icon matListItemIcon class="itemMenu-icon">{{menu.icon}}</mat-icon>
-                        <div matListItemTitle class="itemMenu">{{menu.item}}</div>
+                        <div matListItemTitle class="itemMenu" (click)="clickMenu(menu.item)" >{{menu.item}}</div>
 
                       </mat-list-item>
                 </mat-list>

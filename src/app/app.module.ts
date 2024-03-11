@@ -23,6 +23,7 @@ import { AdjuntoComponent } from './components/productos/adjunto/adjunto.compone
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { SectorComponent } from './components/sector/sector.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LoginComponent } from './components/login/login.component';
     NavbarComponent,
     CrearProductoComponent,
     AdjuntoComponent,
-    LoginComponent
+    LoginComponent,
+    SectorComponent
   ],
   imports: [
     BrowserModule,
