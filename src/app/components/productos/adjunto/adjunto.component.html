@@ -1,1 +1,51 @@
-<p>adjunto works!</p>
+<div class="selector-archivo-container">
+  <div style="margin: 15px 0; font-size: 12px; color: #5B7F65;">
+      <strong>La presentación total no puede superar los {{maxSize / 1024 / 1024}} MB</strong>
+  </div>
+  <div>
+      <span class="btn" [ngClass]="{'btn-info': esBoton, 'btn-file': esBoton, 'menu-item': !esBoton, 'btn-sm': mostrarMensajes, 'desactivado': !habilitadoAlta }">
+          {{textoBoton}}
+          <input #myInput
+          id="sa-fileInput"
+          type="file" multiple
+          (change)="handleFileInput2($event)"
+          accept="{{extensiones}}"
+          title=""
+          menu-close="false"
+          [disabled]="disabledSelector || !habilitadoAlta">
+      </span>
+      <div *ngIf="errorMessage && mostrarMensajes" class="campo-obligatorio" class="campo-obligatorio msg">
+          {{errorMessage}}</div>
+  </div>
+  <div *ngIf="mostrarMensajes" style="margin-top: 20px;">
+      <mat-table #table [dataSource]="dataSource" *ngIf="dataSource" class="files-table'">
+          <ng-container matColumnDef="eliminar">
+              <mat-cell *matCellDef="let archivo">
+                  <em id="sa-eliminar" style="cursor: pointer;" class="material-icons" matTooltipPosition="above"
+                      matTooltip="Eliminar" (click)="eliminar(archivo)">delete</em>
+              </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="titulo">
+              <mat-cell *matCellDef="let archivo" style="width: 300px;">
+                  <div style="width: 290px; text-align: left;">{{archivo.nombreArchivo}}</div>
+              </mat-cell>
+          </ng-container>
+          <!-- <ng-container matColumnDef="privacidad">
+              <mat-cell *matCellDef="let archivo">
+                  <mat-radio-group id="sa-privacidadRadio" class="ml-2">
+                      <mat-radio-button value="PUBLIC" (change)="archivo.privacidad= 'PUBLIC'"
+                          [checked]="archivo.privacidad === 'PUBLIC'" style="font-size: 12px;">Público
+                      </mat-radio-button>
+                      <mat-radio-button value="PRIVAD" (change)="archivo.privacidad= 'PRIVAD'"
+                          [checked]="archivo.privacidad === 'PRIVAD'" style="padding-left: 20px; font-size: 12px;">
+                          Privado</mat-radio-button>
+                  </mat-radio-group>
+              </mat-cell>
+          </ng-container> -->
+          <!-- Activar/Revocar Column -->
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+      <div style="font-size: 12px; margin-top: 15px; color: #5B7F65;">La suma total de los archivos a subir es de :
+          {{(actualSize / 1048576).toFixed(2)}}MB</div>
+  </div>
+</div>

@@ -7,11 +7,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class SectorService {
-  private urlEndPoint:string = 'http://127.0.0.1:8000/api/sector'
+  private urlEndPoint:string = 'http://localhost:8000/api/sector'
 
   constructor(private http:HttpClient) { }
 
   getSectores():Observable<Sector[]>{
-    return this.http.get<Sector[]>(this.urlEndPoint+'/get_sectores');
+    return this.http.get<any[]>(this.urlEndPoint+'/get_sectores');
   }
 }

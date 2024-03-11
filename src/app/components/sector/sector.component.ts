@@ -28,9 +28,9 @@ export class SectorComponent {
 
   getSectores(){
 
-    this.serviceSector.getSectores().subscribe((data:Sector[]) => {
+    this.serviceSector.getSectores().subscribe((data:any) => {
       if(data){
-        this.listaSector = data;
+        this.listaSector = data.data;
         this.dataSource = new MatTableDataSource(this.listaSector);
       }
     }
