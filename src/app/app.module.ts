@@ -24,6 +24,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { SectorComponent } from './components/sector/sector.component';
+import { CategoriasComponent } from './components/categorias/categorias.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SectorComponent } from './components/sector/sector.component';
     CrearProductoComponent,
     AdjuntoComponent,
     LoginComponent,
-    SectorComponent
+    SectorComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
