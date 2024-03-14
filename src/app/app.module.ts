@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { SectorComponent } from './components/sector/sector.component';
 import { CategoriasComponent } from './components/categorias/categorias.component';
+import { MarcasComponent } from './components/marcas/marcas.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CategoriasComponent } from './components/categorias/categorias.componen
     AdjuntoComponent,
     LoginComponent,
     SectorComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    MarcasComponent
   ],
   imports: [
     BrowserModule,

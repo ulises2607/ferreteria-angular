@@ -36,7 +36,16 @@ export class NavbarComponent {
     { 
       item:'Sector',
       icon: 'bookmarks'
-    }
+    },
+    { 
+      item:'Categorias',
+      icon: 'category'
+    },
+    { 
+      item:'Marcas',
+      icon: 'BrandingWatermark'
+    },
+
   ]
 
   constructor(
@@ -51,6 +60,12 @@ export class NavbarComponent {
     } else if( item == "Sector") {
       let path = "sector"
       this.router.navigate([path]);
+    } else if( item == "Categorias") {
+      let path = "categorias"
+      this.router.navigate([path])
+    } else if (item = "Marcas") {
+      let path = "marcas"
+      this.router.navigate([path])
     }
   }
 
