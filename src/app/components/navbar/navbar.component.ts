@@ -19,37 +19,44 @@ export class NavbarComponent {
   public itemsMenu =[
     {
       item:'Productos',
-       icon:'storage'
+      route:'producto',
+      icon:'storage'
     },
     {
       item:'Ventas',
+      route:'ventas',
       icon:'payment'
     },
     {
       item:'Pedido de Compra',
+      route:'pedidoDeCompra',
       icon:'loyalty'
     },
-    { 
+    {
       item:'Proveedor',
+      route:'proveedor',
       icon:'person'
     },
-    { 
+    {
       item:'Sector',
+      route:'sector',
       icon: 'bookmarks'
     },
-    { 
+    {
       item:'Categorias',
+      route:'categorias',
       icon: 'category'
     },
-    { 
+    {
       item:'Marcas',
+      route:'marcas',
       icon: 'BrandingWatermark'
     },
 
   ]
 
   constructor(
-    private _formBuilder: FormBuilder, 
+    private _formBuilder: FormBuilder,
     private router: Router
     ) {}
 
@@ -63,8 +70,11 @@ export class NavbarComponent {
     } else if( item == "Categorias") {
       let path = "categorias"
       this.router.navigate([path])
-    } else if (item = "Marcas") {
+    } else if (item == "Marcas") {
       let path = "marcas"
+      this.router.navigate([path])
+    } else if (item == "Ventas") {
+      let path = "ventas"
       this.router.navigate([path])
     }
   }

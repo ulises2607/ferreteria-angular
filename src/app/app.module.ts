@@ -26,6 +26,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SectorComponent } from './components/sector/sector.component';
 import { CategoriasComponent } from './components/categorias/categorias.component';
 import { MarcasComponent } from './components/marcas/marcas.component';
+import { VentasComponent } from './components/ventas/ventas.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MarcasComponent } from './components/marcas/marcas.component';
     LoginComponent,
     SectorComponent,
     CategoriasComponent,
-    MarcasComponent
+    MarcasComponent,
+    VentasComponent
   ],
   imports: [
     BrowserModule,

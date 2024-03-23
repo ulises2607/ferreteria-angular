@@ -1,5 +1,4 @@
 .example-container {
-  /* position: absolute; */
   top: 0px;
   bottom: 0px;
   left: 0;
@@ -20,6 +19,12 @@
 
 .sidenav {
   background: #2d3872;
+  transform: null !important;
+  /* margin-left: 88px; */
+  /* top: 0px;
+  bottom: 0px; */
+  /* transform: none; */
+  /* visibility: visible !important; */
 }
 
 .example-header {

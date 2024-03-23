@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <div>
     <h2>Lista de Categorias</h2>
     <div class="row">
@@ -7,17 +7,17 @@
           <button mat-flat-button color="primary">Crear</button>
         </div>
       </div>
-    </div>  
-  
+    </div>
+
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
-  
+
         <!-- ID Column -->
         <ng-container matColumnDef="Id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
           <td mat-cell *matCellDef="let row"> {{row.id_categoria}} </td>
         </ng-container>
-  
+
         <!-- Descripcion Column -->
         <ng-container matColumnDef="Descripcion">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion </th>
@@ -35,13 +35,12 @@
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion Estado Categoria </th>
             <td mat-cell *matCellDef="let row"> {{row.descripcion_estado_categoria}} </td>
         </ng-container>
-  
+
         <tr mat-header-row *matHeaderRowDef="ColumnTableCategorias"></tr>
         <tr mat-row *matRowDef="let row; columns: ColumnTableCategorias;"></tr>
-  
+
       </table>
-  
+
     </div>
-  
+
   </div>
-  

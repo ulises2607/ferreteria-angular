@@ -1,41 +1,21 @@
-<!-- <ng-container>
-  <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
-                 [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
-                 [fixedBottomGap]="options.value.bottom">
-                 <mat-list>
-                  <h4 class="titulo-menu">Menu</h4>
-                      <mat-list-item *ngFor="let menu of itemsMenu">
-                        <mat-icon matListItemIcon class="itemMenu-icon">{{menu.icon}}</mat-icon>
-                        <div matListItemTitle class="itemMenu" (click)="clickMenu(menu.item)" >{{menu.item}}</div>
 
-                      </mat-list-item>
-                </mat-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-
-  <mat-toolbar class="example-footer">Footer</mat-toolbar>
-</ng-container> -->
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [mode]="'push'" [opened]="true">
-    <mat-toolbar class="menu-navbar">Menú</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"  [mode]="'side'" [opened]="true">
+    <mat-toolbar class="menu-navbar"><strong style="color: white;">Menú</strong></mat-toolbar>
     <mat-nav-list>
 
-      <mat-list-item *ngFor="let menu of itemsMenu" routerLink="/" (click)="drawer.toggle()">
+      <mat-list-item *ngFor="let menu of itemsMenu">
         <mat-icon matListItemIcon class="itemMenu-icon">{{menu.icon}}</mat-icon>
         <div matListItemTitle class="itemMenu" (click)="clickMenu(menu.item)" >{{menu.item}}</div>
       </mat-list-item>
 
     </mat-nav-list>
   </mat-sidenav>
-  <!-- <mat-sidenav-content>
-    <mat-toolbar color="#2d3872">
+  <mat-sidenav-content>
+    <!-- <mat-toolbar color="#2d3872">
       <span>Título de tu aplicación</span>
     </mat-toolbar>
-    <ng-content></ng-content>
-  </mat-sidenav-content> -->
+    <ng-content></ng-content> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
