@@ -10,7 +10,6 @@ import { CategoriasComponent } from './components/categorias/categorias.componen
 import { MarcasComponent } from './components/marcas/marcas.component';
 
 const appRoutes: Routes = [
-  { path: '', component: NavbarComponent},
   // { path: '', component: LoginComponent},
   // { path: 'inicio' , component: LoginComponent},
   { path: 'productos', component: ProductosComponent },
@@ -18,7 +17,8 @@ const appRoutes: Routes = [
   { path: 'sector', component: SectorComponent },
   { path: 'categorias', component: CategoriasComponent },
   { path: 'marcas', component: MarcasComponent },
-  { path: '**', pathMatch:'full', redirectTo: ''}
+  { path: '', redirectTo: '/productos', pathMatch: 'full' }, // Si deseas redirigir a una ruta predeterminada
+  // { path: '**', redirectTo: '/productos' } // Redirige a /productos si la URL no coincide con ninguna ruta definida
 ];
 
 @NgModule({

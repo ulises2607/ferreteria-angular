@@ -1,9 +1,13 @@
 .example-container {
-  position: absolute;
+  /* position: absolute; */
   top: 0px;
   bottom: 0px;
   left: 0;
   right: 0;
+}
+
+.menu-navbar {
+  background-color: #2d3872;
 }
 
 .example-sidenav {
@@ -11,6 +15,10 @@
   align-items: center;
   justify-content: center;
   width: 250px;
+  background: #2d3872;
+}
+
+.sidenav {
   background: #2d3872;
 }
 
